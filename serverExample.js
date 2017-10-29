@@ -22,9 +22,9 @@ const fs = require('fs');
 // End Get Dependecies
 ////////////////////////////////////////////////////////////
 
-
 ////////////////////////////////////////////////////////////
-// Begin 
+// Begin server configuration
+//
 const options = {
   hostname: 'switchmagic.com',
   key: fs.readFileSync('/etc/letsencrypt/live/switchmagic.com/privkey.pem'),
@@ -88,7 +88,7 @@ const server = https.createServer(options, app);
 server.listen(port, () => console.log(`API running on localhost:${port}`));
 
 //
-// End serverExample.js
+// End server configuration
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
